@@ -180,3 +180,139 @@ section img {
     border-radius: 8px;
     text-align: center;
 }
+/* Catalogue Sport.com */
+
+.catalogue main {
+    max-width: 1200px;
+}
+
+.catalogue article {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.catalogue article img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+.catalogue article h3 {
+    color: #d35400;
+}
+
+.catalogue article strong {
+    color: #d35400;
+    font-size: 24px;
+}
+
+.catalogue article a {
+    display: inline-block;
+    background-color: #d35400;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.catalogue article a:hover {
+    background-color: #a84300;
+}
+
+.catalogue .grille-produits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 700px) {
+    .catalogue .grille-produits {
+        grid-template-columns: 1fr;
+    }
+}
+.catalogue section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.catalogue section h1 {
+    color: #d35400;
+    font-size: 32px;
+}
+
+.catalogue section a {
+    color: #d35400;
+    font-weight: bold;
+}
+.catalogue header {
+    padding: 20px;
+}
+
+.catalogue header .search {
+    max-width: 650px;
+    margin: 20px auto;
+    flex-direction: row;
+}
+
+.catalogue header .search input {
+    flex: 1;
+    min-width: 0;
+}
+
+.catalogue header .search button {
+    width: auto;
+    border-radius: 5px;
+}
+
+.catalogue nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    background-color: #171717;
+}
+
+.catalogue nav li a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+}
+
+.catalogue nav li a:hover {
+    color: #d35400;
+}
+.catalogue .banniere {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f2f2f2;
+}
+
+.catalogue .banniere img {
+    width: 45%;
+}
+
+.catalogue .banniere > div {
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    .catalogue .banniere {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .catalogue .banniere img {
+        width: 100%;
+    }
+}
