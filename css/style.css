@@ -65,6 +65,11 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     flex: 1;
+    border-left: 4px solid #d35400;
+}
+
+.membre:hover {
+    background-color: #ffe8d6;
 }
 
 .membre h3 {
