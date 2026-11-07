@@ -316,3 +316,12 @@ section img {
         width: 100%;
     }
 }
+@media (max-width: 575px) {
+    .catalogue header .search {
+        flex-direction: column;
+    }
+
+    .catalogue header .search button {
+        width: 100%;
+    }
+}
