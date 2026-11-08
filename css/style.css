@@ -1,15 +1,53 @@
 
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+:root {
+    --fond: #0f0f12;
+    --carte: #17171c;
+    --bordure: #26262e;
+    --orange: #ff8c00;
+    --orange-fonce: #d35400;
+    --texte: #f2f2f2;
+    --gris: #9a9aa5;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #222;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: var(--fond);
+    color: var(--texte);
 }
 
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: var(--orange-fonce);
+}
+
+/* =========================================================
+   HEADER + NAVIGATION
+   ========================================================= */
 header {
     background-color: #171717;
     color: white;
@@ -17,7 +55,8 @@ header {
     text-align: center;
 }
 
-.logo {
+.logo,
+header img {
     width: 180px;
     height: auto;
 }
@@ -40,78 +79,33 @@ nav a:hover {
     color: orange;
 }
 
-main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+/* Menu « Qui sommes-nous / Contact » */
+.sommes-nous {
+    text-align: center;
+    padding: 20px 0;
 }
 
-section {
-    margin-bottom: 40px;
+.sommes-nous a {
+    color: var(--orange-fonce);
+    margin: 0 40px;
+    text-decoration: none;
 }
 
-h2 {
-    color: #d35400;
+.sommes-nous a:hover {
+    color: var(--orange);
 }
 
-.equipe {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.membre {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1;
-    border-left: 4px solid #d35400;
-}
-
-.membre:hover {
-    background-color: #ffe8d6;
-}
-
-.membre h3 {
-    color: #d35400;
-}
-
-address {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-left: 4px solid #d35400;
-    margin-bottom: 20px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-iframe {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-width: 100%;
-}
-
+/* =========================================================
+   FORMULAIRES
+   ========================================================= */
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -125,7 +119,7 @@ textarea {
 }
 
 button {
-    background-color: #d35400;
+    background-color: var(--orange-fonce);
     color: white;
     padding: 12px;
     border: none;
@@ -136,120 +130,7 @@ button:hover {
     background-color: #a84300;
 }
 
-footer {
-    background-color: #171717;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-@media (max-width: 575px) {
-    nav a {
-        display: block;
-        margin: 10px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    .equipe {
-        flex-direction: column;
-    }
-
-    .logo {
-        width: 140px;
-    }
-}
-section img {
-    max-width: 100%;
-    height: auto;
-}
-.chiffres {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 20px;
-    gap: 15px;
-}
-
-.chiffres li {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-/* Catalogue Sport.com */
-
-.catalogue main {
-    max-width: 1200px;
-}
-
-.catalogue article {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.catalogue article img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-}
-
-.catalogue article h3 {
-    color: #d35400;
-}
-
-.catalogue article strong {
-    color: #d35400;
-    font-size: 24px;
-}
-
-.catalogue article a {
-    display: inline-block;
-    background-color: #d35400;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.catalogue article a:hover {
-    background-color: #a84300;
-}
-
-.catalogue .grille-produits {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-@media (max-width: 700px) {
-    .catalogue .grille-produits {
-        grid-template-columns: 1fr;
-    }
-}
-.catalogue section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.catalogue section h1 {
-    color: #d35400;
-    font-size: 32px;
-}
-
-.catalogue section a {
-    color: #d35400;
-    font-weight: bold;
-}
+/* Recherche dans le header */
 .catalogue header {
     padding: 20px;
 }
@@ -270,6 +151,7 @@ section img {
     border-radius: 5px;
 }
 
+/* Menu des catégories */
 .catalogue nav ul {
     display: flex;
     justify-content: center;
@@ -288,40 +170,673 @@ section img {
 }
 
 .catalogue nav li a:hover {
-    color: #d35400;
+    color: var(--orange);
 }
-.catalogue .banniere {
+
+/* =========================================================
+   PAGES « QUI SOMMES-NOUS » / CONTACT (blocs clairs)
+   ========================================================= */
+.equipe {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.membre {
+    background-color: #f2f2f2;
+    color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    border-left: 4px solid var(--orange-fonce);
+}
+
+.membre:hover {
+    background-color: #ffe8d6;
+}
+
+.membre h3 {
+    color: var(--orange-fonce);
+}
+
+address {
+    background-color: #f2f2f2;
+    color: #222;
+    padding: 20px;
+    border-left: 4px solid var(--orange-fonce);
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+iframe {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.chiffres {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 20px;
+    gap: 15px;
+}
+
+.chiffres li {
+    background-color: #f2f2f2;
+    color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+    min-height: 420px;
+    margin: 20px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+    background-image:
+        linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.85) 35%, rgba(10, 10, 10, 0) 70%),
+        linear-gradient(0deg, #0a0a0a 0%, rgba(10, 10, 10, 0) 30%),
+        url("../img/hero.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 48px;
+    max-width: 520px;
+    line-height: 1.1;
+}
+
+.hero p {
+    margin: 0;
+    max-width: 480px;
+    color: #ddd;
+}
+
+.hero .accent {
+    background: linear-gradient(90deg, #ff8c00, #ffd54a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.badge {
+    align-self: flex-start;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--orange);
+    background: rgba(255, 140, 0, 0.12);
+    border: 1px solid rgba(255, 140, 0, 0.4);
+    border-radius: 999px;
+}
+
+.hero-bas {
     display: flex;
     align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.compteur {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--bordure);
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--gris);
+}
+
+.compteur .time b {
+    color: var(--orange);
+    font-size: 22px;
+}
+
+/* Bouton orange (hero + cartes) */
+.catalogue .btn-offre {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--orange);
+    color: #111;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.catalogue .btn-offre:hover {
+    background: #ffa733;
+}
+
+/* =========================================================
+   FILTRES
+   ========================================================= */
+.barre-filtres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.filtres {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.catalogue .filtres a {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--texte);
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.catalogue .filtres a.actif {
+    background: var(--orange);
+    color: #111;
+    font-weight: 700;
+}
+
+.barre-filtres label {
+    font-size: 13px;
+    color: var(--gris);
+}
+
+.barre-filtres select {
+    background: var(--carte);
+    color: var(--texte);
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+/* =========================================================
+   CATALOGUE / CARTES PRODUITS
+   ========================================================= */
+.catalogue main {
+    max-width: 1200px;
+}
+
+.catalogue .grille-produits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.catalogue .carte {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.catalogue .carte:hover {
+    transform: translateY(-4px);
+    border-color: var(--orange);
+}
+
+.carte .visuel {
+    position: relative;
+    background: white;
+}
+
+.catalogue .carte .visuel img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.carte .tag,
+.carte .reduc,
+.carte .stock {
+    position: absolute;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.carte .tag {
+    top: 12px;
+    left: 12px;
+    background: #111;
+    color: white;
+}
+
+.carte .reduc {
+    top: 12px;
+    right: 12px;
+    background: #111;
+    color: var(--orange);
+}
+
+.carte .stock {
+    bottom: 10px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #4cd964;
+}
+
+.carte .contenu {
+    padding: 16px;
+}
+
+.carte .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--gris);
+}
+
+.carte .etoiles {
+    color: var(--orange);
+}
+
+.catalogue .carte h3 {
+    margin: 10px 0 6px;
+    font-size: 16px;
+    color: var(--texte);
+}
+
+.carte .desc {
+    font-size: 13px;
+    color: var(--gris);
+    line-height: 1.5;
+}
+
+.carte .tailles {
+    font-size: 11px;
+    color: var(--gris);
+}
+
+.carte .tailles span {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-right: 4px;
+    border: 1px solid var(--bordure);
+    border-radius: 6px;
+    color: var(--texte);
+}
+
+.carte .achat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.catalogue .carte .achat a {
+    padding: 10px 16px;
+}
+
+.carte .prix-ligne {
+    margin: 0;
+}
+
+.carte del {
+    color: var(--gris);
+    margin-right: 6px;
+}
+
+.catalogue .carte strong {
+    color: var(--orange);
+    font-size: 22px;
+}
+
+/* Lien « Charger plus de modèles » (ajoute class="charger-plus" sur son <div>) */
+.charger-plus {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.charger-plus a {
+    color: var(--orange);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* =========================================================
+   RÉASSURANCE (4 arguments du bas)
+   ========================================================= */
+.reassurance {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    padding: 30px;
-    background-color: #f2f2f2;
 }
 
-.catalogue .banniere img {
-    width: 45%;
+.reassurance h4 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--orange-fonce);
 }
 
-.catalogue .banniere > div {
+.reassurance p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bbb;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: var(--gris);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--orange);
+}
+/* =========================================================
+   HEADER PRINCIPAL (logo, recherche, compte, panier)
+   ========================================================= */
+.bandeau-haut {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--bordure);
+}
+
+.header-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo cliquable */
+.logo-lien {
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo-lien img {
+    display: block;
+    transition: transform 0.2s;
+}
+
+.logo-lien:hover img {
+    transform: scale(1.05);
+}
+
+/* La recherche prend la place restante */
+.catalogue header .search {
     flex: 1;
+    margin: 0;
 }
 
-@media (max-width: 700px) {
-    .catalogue .banniere {
-        flex-direction: column;
-        padding: 15px;
+/* Profil */
+.compte {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.profil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: var(--orange);
+    color: #111;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.profil strong {
+    display: block;
+    font-size: 13px;
+}
+
+.profil em {
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: var(--orange);
+}
+
+/* Panier */
+.panier {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 999px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.panier:hover {
+    border-color: var(--orange);
+    background: #1f1f26;
+}
+
+.nb-panier {
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    display: grid;
+    place-items: center;
+    background: var(--orange);
+    color: #111;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 999px;
+}
+/* =========================================================
+   RESPONSIVE (toujours tout en bas du fichier)
+   ========================================================= */
+
+/* ---------- Tablette (≤ 992px) ---------- */
+@media (max-width: 992px) {
+    .hero {
+        padding: 40px 25px;
+        min-height: 360px;
     }
 
-    .catalogue .banniere img {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .reassurance {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+/* ---------- Petite tablette (≤ 700px) ---------- */
+@media (max-width: 700px) {
+    .barre-filtres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .catalogue .grille-produits {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        border-radius: 10px;
+        background-position: 70% center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .catalogue nav ul {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .sommes-nous a {
+        margin: 0 15px;
+    }
+        .header-principal {
+        flex-direction: column;
+    }
+
+    .catalogue header .search {
         width: 100%;
     }
 }
+
+/* ---------- Téléphone (≤ 575px) ---------- */
 @media (max-width: 575px) {
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .equipe {
+        flex-direction: column;
+    }
+
+    .logo,
+    header img {
+        width: 140px;
+    }
+
     .catalogue header .search {
         flex-direction: column;
     }
 
     .catalogue header .search button {
         width: 100%;
+    }
+
+    .hero {
+        margin: 10px;
+        padding: 30px 15px;
+        min-height: 320px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero-bas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .catalogue .btn-offre {
+        width: 100%;
+        text-align: center;
+    }
+
+    .compteur {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .filtres {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .catalogue .filtres a {
+        white-space: nowrap;
+    }
+
+    .carte .achat {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .reassurance {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+        .compte {
+        width: 100%;
+        justify-content: space-between;
     }
 }
