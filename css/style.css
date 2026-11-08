@@ -1,7 +1,3 @@
-
-/* =========================================================
-   VARIABLES
-   ========================================================= */
 :root {
     --fond: #0f0f12;
     --carte: #17171c;
@@ -12,11 +8,11 @@
     --gris: #9a9aa5;
 }
 
-/* =========================================================
-   BASE
-   ========================================================= */
 * {
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,9 +41,6 @@ h2 {
     color: var(--orange-fonce);
 }
 
-/* =========================================================
-   HEADER + NAVIGATION
-   ========================================================= */
 header {
     background-color: #171717;
     color: white;
@@ -79,7 +72,6 @@ nav a:hover {
     color: orange;
 }
 
-/* Menu « Qui sommes-nous / Contact » */
 .sommes-nous {
     text-align: center;
     padding: 20px 0;
@@ -95,9 +87,6 @@ nav a:hover {
     color: var(--orange);
 }
 
-/* =========================================================
-   FORMULAIRES
-   ========================================================= */
 form {
     display: flex;
     flex-direction: column;
@@ -130,7 +119,6 @@ button:hover {
     background-color: #a84300;
 }
 
-/* Recherche dans le header */
 .catalogue header {
     padding: 20px;
 }
@@ -151,7 +139,6 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Menu des catégories */
 .catalogue nav ul {
     display: flex;
     justify-content: center;
@@ -173,9 +160,6 @@ button:hover {
     color: var(--orange);
 }
 
-/* =========================================================
-   PAGES « QUI SOMMES-NOUS » / CONTACT (blocs clairs)
-   ========================================================= */
 .equipe {
     display: flex;
     gap: 20px;
@@ -248,9 +232,6 @@ iframe {
     text-align: center;
 }
 
-/* =========================================================
-   HERO
-   ========================================================= */
 .hero {
     min-height: 420px;
     margin: 20px;
@@ -326,7 +307,6 @@ iframe {
     font-size: 22px;
 }
 
-/* Bouton orange (hero + cartes) */
 .catalogue .btn-offre {
     display: inline-block;
     padding: 12px 24px;
@@ -341,9 +321,6 @@ iframe {
     background: #ffa733;
 }
 
-/* =========================================================
-   FILTRES
-   ========================================================= */
 .barre-filtres {
     display: flex;
     justify-content: space-between;
@@ -395,9 +372,6 @@ iframe {
     padding: 6px 10px;
 }
 
-/* =========================================================
-   CATALOGUE / CARTES PRODUITS
-   ========================================================= */
 .catalogue main {
     max-width: 1200px;
 }
@@ -535,7 +509,6 @@ iframe {
     font-size: 22px;
 }
 
-/* Lien « Charger plus de modèles » (ajoute class="charger-plus" sur son <div>) */
 .charger-plus {
     text-align: center;
     margin-top: 30px;
@@ -547,9 +520,6 @@ iframe {
     text-decoration: none;
 }
 
-/* =========================================================
-   RÉASSURANCE (4 arguments du bas)
-   ========================================================= */
 .reassurance {
     max-width: 1100px;
     margin: 40px auto 0;
@@ -572,9 +542,6 @@ iframe {
     color: #bbb;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
 footer {
     background-color: #171717;
     color: white;
@@ -591,9 +558,7 @@ footer a {
 footer a:hover {
     color: var(--orange);
 }
-/* =========================================================
-   HEADER PRINCIPAL (logo, recherche, compte, panier)
-   ========================================================= */
+
 .bandeau-haut {
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -609,7 +574,6 @@ footer a:hover {
     margin: 0 auto;
 }
 
-/* Logo cliquable */
 .logo-lien {
     display: block;
     flex-shrink: 0;
@@ -624,13 +588,11 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-/* La recherche prend la place restante */
 .catalogue header .search {
     flex: 1;
     margin: 0;
 }
 
-/* Profil */
 .compte {
     display: flex;
     align-items: center;
@@ -668,7 +630,7 @@ footer a:hover {
     color: var(--orange);
 }
 
-/* Panier */
+
 .panier {
     display: inline-flex;
     align-items: center;
@@ -701,11 +663,8 @@ footer a:hover {
     font-weight: 700;
     border-radius: 999px;
 }
-/* =========================================================
-   RESPONSIVE (toujours tout en bas du fichier)
-   ========================================================= */
 
-/* ---------- Tablette (≤ 992px) ---------- */
+
 @media (max-width: 992px) {
     .hero {
         padding: 40px 25px;
@@ -722,7 +681,7 @@ footer a:hover {
     }
 }
 
-/* ---------- Petite tablette (≤ 700px) ---------- */
+
 @media (max-width: 700px) {
     .barre-filtres {
         flex-direction: column;
@@ -759,7 +718,7 @@ footer a:hover {
     }
 }
 
-/* ---------- Téléphone (≤ 575px) ---------- */
+
 @media (max-width: 575px) {
     nav a {
         display: block;
@@ -786,7 +745,7 @@ footer a:hover {
     .catalogue header .search button {
         width: 100%;
     }
-<<<<<<< HEAD
+ HEAD
 
     .hero {
         margin: 10px;
@@ -840,7 +799,7 @@ footer a:hover {
         width: 100%;
         justify-content: space-between;
     }
-=======
+
 }
 
 .catalogue main + nav {
@@ -857,5 +816,5 @@ footer a:hover {
 .catalogue main + nav a:hover {
     color: #a84300;
     text-decoration: underline;
->>>>>>> origin/integration-sportcom
+
 }
