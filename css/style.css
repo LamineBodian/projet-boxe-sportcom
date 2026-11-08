@@ -786,6 +786,7 @@ footer a:hover {
     .catalogue header .search button {
         width: 100%;
     }
+<<<<<<< HEAD
 
     .hero {
         margin: 10px;
@@ -839,4 +840,22 @@ footer a:hover {
         width: 100%;
         justify-content: space-between;
     }
+=======
+}
+
+.catalogue main + nav {
+    text-align: center;
+    padding: 20px;
+}
+
+.catalogue main + nav a {
+    color: #d35400;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.catalogue main + nav a:hover {
+    color: #a84300;
+    text-decoration: underline;
+>>>>>>> origin/integration-sportcom
 }
