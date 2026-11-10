@@ -17,6 +17,7 @@
         <p>Votre spécialiste des équipements de boxe</p>
 
         <nav>
+            <a href="index.html">Accueil</a>
             <a href="index.html">Catalogue</a>
             <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
             <a href="#contact">Contact</a>
@@ -33,18 +34,42 @@
         </section>
 
         <section>
+            <h2>Notre histoire</h2>
+            <p>Sport.com est une boutique spécialisée dans les équipements de boxe. Notre objectif est de proposer du
+                matériel adapté aux débutants comme aux sportifs expérimentés.</p>
+            <p>Nous souhaitons rendre la pratique de la boxe accessible à tous, en proposant des gants, des protections
+                et des accessoires de qualité à des prix abordables.</p>
+            <img src="images/notre-histoire.png" alt="Salle de boxe et équipements Sport.com" width="600">
+        </section>
+        <section>
+            <h2>Nos chiffres clés</h2>
+
+            <ul class="chiffres">
+                <li>10 ans d'expérience</li>
+                <li>500 produits disponibles</li>
+                <li>2 000 clients satisfaits</li>
+                <li>15 marques partenaires</li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Notre équipe</h2>
             <p>Notre équipe est composée de passionnés de boxe.</p>
 
             <div class="equipe">
                 <div class="membre">
-                    <h3>Conseillers sportifs</h3>
-                    <p>Ils vous accompagnent dans le choix de vos équipements.</p>
+                    <h3>Nadia K. — Fondatrice</h3>
+                    <p>Ancienne championne de boxe anglaise, passionnée par les équipements sportifs.</p>
                 </div>
 
                 <div class="membre">
-                    <h3>Service client</h3>
-                    <p>Notre équipe répond à vos questions et vous conseille.</p>
+                    <h3>Yanis B. — Responsable magasin</h3>
+                    <p>Il accompagne les clients dans le choix de leurs gants et protections.</p>
+                </div>
+
+                <div class="membre">
+                    <h3>Léa M. — Service client</h3>
+                    <p>Elle répond aux questions des clients et assure le suivi des commandes.</p>
                 </div>
             </div>
         </section>
@@ -53,30 +78,37 @@
             <h2>Notre magasin</h2>
 
             <address>
-                Sport.com<br>
-                Paris, France
+                <strong>Sport.com - Boutique de boxe</strong><br>
+                Paris, France<br>
+                Magasin fictif - Projet scolaire
             </address>
 
             <h3>Nos horaires</h3>
 
             <table>
                 <caption>Horaires d'ouverture</caption>
-                <tr>
-                    <th>Jour</th>
-                    <th>Horaires</th>
-                </tr>
-                <tr>
-                    <td>Lundi - Vendredi</td>
-                    <td>10h - 19h</td>
-                </tr>
-                <tr>
-                    <td>Samedi</td>
-                    <td>10h - 18h</td>
-                </tr>
-                <tr>
-                    <td>Dimanche</td>
-                    <td>Fermé</td>
-                </tr>
+
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Horaires</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Lundi - Vendredi</td>
+                        <td>10h - 19h</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>10h - 18h</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td>Fermé</td>
+                    </tr>
+                </tbody>
             </table>
 
             <h3>Nous localiser</h3>
@@ -85,8 +117,6 @@
                 src="https://www.openstreetmap.org/export/embed.html?bbox=2.3300%2C48.8500%2C2.3600%2C48.8700&amp;layer=mapnik&amp;marker=48.8600%2C2.3450"
                 width="100%" height="300">
             </iframe>
-
-
         </section>
 
         <section id="contact">
@@ -100,7 +130,7 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" minlength="10" required></textarea>
 
                 <button type="submit">Envoyer</button>
             </form>
